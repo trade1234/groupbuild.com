@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins&display=swap");
 
-.cd__main{
-    display: block !important;
-    background: #725400 !important;
-    min-height: 450px;
-   height: 100vh;
+.cd__main {
+  display: block !important;
+  background: #720000 !important;
+  min-height: 450px;
+  height: 100vh;
 }
 .container {
   width: 100%;
@@ -67,7 +67,7 @@
   font-weight: 400;
   margin: 5px 0 0 0;
   padding: 0 5px;
-  color: #ffc404;
+  color: #fc3636;
 }
 
 .quote-container {

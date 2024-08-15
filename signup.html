@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Group Biuld-Contact Us</title>
+    <title>Group Biuld-Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,7 +30,11 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- User style -->
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/testmony.css" />
+    <link rel="stylesheet" href="./css/demo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -70,7 +74,8 @@
             </div>
             <!-- End Header Top -->
             <!-- Start Mainmenu Area -->
-            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header"
+                style="background-color: rgb(255, 255, 255);">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2 col-sm-6 col-xs-7">
@@ -93,7 +98,6 @@
                                     </li>
                                     <li><a href="projects-one.html">PROJECTS</a></li>
                                     <li><a href="contact.html">CONTACT</a></li>
-                                    <li><a href="signup.html">Register now</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
@@ -108,17 +112,15 @@
                                         </li>
                                         <li><a href="projects-one.html">PROJECTS</a></li>
                                         <li><a href="contact.html">contact</a></li>
-                                        <li><a href="signup.html">Register now</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <!-- <div class="col-md-2 col-sm-6 hidden-xs">
+                        <div class="col-md-2 col-sm-6 hidden-xs">
                             <div class="htc__header__search">
-                                <input type="text" placeholder="SEARCH">
-                                <a href="#"><i class="fa fa-search"></i></a>
+
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="mobile-menu-area"></div>
                 </div>
@@ -126,135 +128,337 @@
             <!-- End Mainmenu Area -->
         </div>
         <!-- End Header Style -->
-        <!-- Start Bradcaump area -->
-        <div class="ht__bradcaump__area" data--black__overlay="6"
-            style="background: rgba(0, 0, 0, 0) url(Imagefor/Service_deitas1.jpg) no-repeat scroll center center / cover ;">
-            <div class="ht__bradcaump__wrap">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">CONTACT</h2>
-                                <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">Home</a>
-                                    <span class="brd-separetor">-</span>
-                                    <span class="breadcrumb-item active">Contact</span>
-                                </nav>
-                            </div>
-                        </div>
+
+
+        <style>
+            /* Variables */
+            :root {
+                --primary-color: #02344bd3;
+                /* blue */
+                --secondary-color: #b30202;
+                /* orange */
+                --accent-color: #08814fe2;
+                /* green */
+                --text-color: #333;
+                /* dark gray */
+                --background-color: rgba(191, 191, 191, 0.635);
+                --font-family: "Open Sans", sans-serif;
+                --font-size: 16px;
+                --line-height: 1.5;
+            }
+
+            /* Global Styles */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: var(--font-family);
+                font-size: var(--font-size);
+                line-height: var(--line-height);
+                color: var(--text-color);
+                background-color: var(--background-color);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: bold;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                margin-bottom: 1em;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+
+            a:hover {
+                color: var(--secondary-color);
+            }
+
+            /* Form Styles */
+            .php-email-form {
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+            .form-section {
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #ddd;
+            }
+
+            .form-section h3 {
+                margin-bottom: 10px;
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .php-email-form {
+                    padding: 10px;
+                }
+
+                .form-group {
+                    margin-bottom: 15px;
+                }
+
+                label {
+                    margin-bottom: 5px;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"] {
+                    padding: 5px;
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .php-email-form {
+                    padding: 5px;
+                }
+
+                .form-group {
+                    margin-bottom: 10px;
+                }
+
+                label {
+                    margin-bottom: 2px;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"] {
+                    padding: 2px;
+                    font-size: 12px;
+                }
+            }
+
+            /* Animations */
+            .anime {
+                opacity: 0;
+                transform: scale(0.5);
+                transition: opacity 0.5s, transform 0.5s;
+            }
+
+            .anime.active {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* Accessibility */
+            [aria-hidden="true"] {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+
+            /* Reusable Components */
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                background-color: var(--primary-color);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background-color: var(--secondary-color);
+                color: white;
+            }
+
+            .contact__message {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                color: #333;
+                padding: 20px;
+                border-radius: 8px;
+                background-color: #f4f4f4;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeInUp 0.6s ease-out forwards;
+            }
+
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
+        <form action="" method="post" role="form" class="php-email-form" id="contact-form">
+            <div class="row">
+                <div class="header">
+                    <h1 style="text-align: center;"><span>Register</span> Here</h1>
+                    <hr>
+                </div><br>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="full_name" class="form-control form-control-lg form-control-a"
+                            placeholder="Your Name" required />
                     </div>
                 </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input name="email" type="email" class="form-control form-control-lg form-control-a"
+                            placeholder="Your Email" required />
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" required />
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="secondary_phone">Secondary Phone Number</label>
+                        <input type="text" name="secondary_phone" class="form-control"
+                            placeholder="Secondary Phone Number" />
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" class="form-control" placeholder="Address" />
+                    </div>
+                </div><br>
+
+
+                <!-- Interested in Building -->
+                <div class="form-section" style="margin-top:15px; margin-left: 20px;">
+                    <h3 style="margin-bottom: 10px;">Interested in Building</h3>
+                    <div class="form-group" style="margin-left: 15px; padding-bottom:3px;">
+                        <label><input type="checkbox" name="interested_building" value="Residential Building" />
+                            Residential Building</label>
+                        <label><input type="checkbox" name="interested_building" value="Commercial Building" />
+                            Commercial Building</label>
+                        <label><input type="checkbox" name="interested_building"
+                                value="Have my own land I just want to build" />
+                            Have my own land I just want to build</label>
+                        <label><input type="checkbox" name="interested_building" value="Other" />
+                            Other</label>
+                    </div>
+                </div>
+
+                <!-- Preferred Build Location -->
+                <div class="form-section" style="margin-top:15px; margin-right: 20px;">
+                    <h3 style="margin-bottom: 10px;">Preferred Build Location</h3>
+                    <div class="form-group" style="margin-left: 15px; padding-bottom:3px;">
+                        <label><input type="checkbox" name="preferred_location" value="City Center" />
+                            City Center</label>
+                        <label><input type="checkbox" name="preferred_location" value="Secondary Center" />
+                            Secondary Center</label>
+                        <label><input type="checkbox" name="preferred_location" value="Lowland" />
+                            Lowland</label>
+                    </div>
+                </div>
+
+                <!-- How did you hear about us -->
+                <div class="form-section" style="margin-top: -28px; width: auto;">
+                    <h3 style="margin-bottom: 10px; text-align: center;">How did you hear about Group Build PLC?</h3>
+                    <hr><br>
+                    <div class="form-group" style="margin-left: 15px; display: flex; flex-wrap: wrap;">
+
+                        <label
+                            style="display: inline-block; width: calc(33.33% - 10px); margin-right: 10px; margin-bottom: 10px;">
+                            <input type="checkbox" name="hear_about_us" value="Social Media" />
+                            Social Media
+                        </label>
+
+                        <label
+                            style="display: inline-block; width: calc(33.33% - 10px); margin-right: 10px; margin-bottom: 10px;">
+                            <input type="checkbox" name="hear_about_us" value="Referral" />
+                            Referral
+                        </label>
+                        <label
+                            style="display: inline-block; width: calc(33.33% - 10px); margin-right: 10px; margin-bottom: 10px;">
+                            <input type="checkbox" name="hear_about_us" value="Industry Event" />
+                            Industry Event
+                        </label>
+
+                        <label
+                            style="display: inline-block; width: calc(33.33% - 10px); margin-right: 10px; margin-bottom: 10px;">
+                            <input type="checkbox" name="hear_about_us" value="Other" />
+                            Other
+                        </label>
+
+                        <label
+                            style="display: inline-block; width: calc(33.33% - auto); margin-right: 10px; margin-bottom: 10px;">
+                            <input type="checkbox" name="hear_about_us" value="Online Advertisement" />
+                            Online Advertisement
+                        </label>
+
+
+                    </div>
+                </div>
+
+                <p class="contact__message" id="contact-message"></p>
+
+                <div class="col-md-12" style="display: flex; justify-content: center;">
+                    <button type="submit" class="btn btn-a">Send Message</button>
+                </div>
+
             </div>
-        </div>
-        <!-- End Bradcaump area -->
-        <!-- Start Contact Address -->
-        <section class="htc__contact__area bg__white ptb--150">
-            <div class="container">
-                <div class="row pb--100">
-                    <div class="col-md-12">
-                        <div class="htc__contact__inner">
-                            <h2 class="title__line--5">CONTACT INFORMATION</h2>
-                            <p>Feel free to reach out to our customer service team via email or phone if you have
-                                specific questions. We’re here to assist you every step of the way!</p>
-                        </div>
-                        <div class="htc__address__container">
-                            <!-- Start Single Address -->
-                            <div class="ct__address">
-                                <div class="ct__address__icon">
-                                    <i class="zmdi zmdi-pin"></i>
-                                </div>
-                                <div class="ct__details">
-                                    <p>Meskel Flower, Jema Building <br>next to Dreamliner hotel, <br>408 Addis Ababa-
-                                        Ethiopia<br></p>
-                                </div>
-                            </div>
-                            <!-- End Single Address -->
-                            <!-- Start Single Address -->
-                            <div class="ct__address">
-                                <div class="ct__address__icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="ct__details">
-                                    <p><a href="#">(+251) 93 202 1111</a></p>
-                                    <p><a href="#">(+251) 93 205 1111</a></p>
-                                </div>
-                            </div>
-                            <!-- End Single Address -->
-                            <!-- Start Single Address -->
-                            <div class="ct__address">
-                                <div class="ct__address__icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <div class="ct__details">
-                                    <p><a href="#">info@groupbuildplc.com</a></p>
-                                    <p><a href="#">www.groupbuildplc.com</a></p>
-                                </div>
-                            </div>
-                            <!-- End Single Address -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="htc__google__map">
-                            <h2 class="title__line--5">WHERE WE LOCATED</h2>
-                            <div class="map__contacts">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15762.43369350467!2d38.7954484!3d9.0081309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b852453990c27%3A0x16f56cffb9c3e532!2zSmVtYSBCdWlsZGluZyDhi6DhiJsg4YiV4YqV4Y2D!5e0!3m2!1sen!2set!4v1717482276813!5m2!1sen!2set"
-                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="htc__contact__form__wrap">
-                            <h2 class="title__line--5">SEND US A MESSAGE</h2>
-                            <div class="contact-form-wrap">
-                                <form id="contact-form" action="#" method="post" id="contact-form">
-                                    <div class="single-contact-inner">
-                                        <div class="single-contact-form">
-                                            <div class="contact-box name">
-                                                <span>Your Name*</span>
-                                                <input type="text" name="user_name">
-                                            </div>
-                                            <div class="contact-box email">
-                                                <span>Your Email*</span>
-                                                <input type="email" name="user_email">
-                                            </div>
-                                            <div class="contact-box phone">
-                                                <span>Phone</span>
-                                                <input type="text" name="user_phone">
-                                            </div>
-                                            <div class="contact-box subject">
-                                                <span>Subject*</span>
-                                                <input type="text" name="user_subject">
-                                            </div>
-                                        </div>
-                                        <div class="single-contact-form">
-                                            <div class="contact-box message">
-                                                <span>Message*</span>
-                                                <textarea name="user_message"></textarea>
-                                            </div>
-                                            <p class="contact__message" id="contact-message"></p>
-                                            <div class="contact-btn">
-                                                <button type="submit" class="htc__btn btn--theme">SEND NOW</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Contact Address -->
+        </form>
 
 
-        <!-- Start Contact Address -->
         <div class="htc__contact__address add-res bg__cat--1">
             <div class="container">
                 <div class="row">
@@ -266,8 +470,10 @@
                                     <i class="zmdi zmdi-pin"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p>Meskel Flower, Jema Building <br>next to Dreamliner hotel, <br>408 Addis Ababa-
-                                        Ethiopia<br></p>
+                                    <p style="color:white;">Meskel Flower, Jema Building <br>next to Dreamliner hotel,
+                                        <br>408 Addis Ababa-
+                                        Ethiopia<br>
+                                    </p>
                                 </div>
                             </div>
                             <!-- End Single Address -->
@@ -277,8 +483,8 @@
                                     <i class="fa fa-globe" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">info@groupbuildplc.com</a></p>
-                                    <p><a href="#">www.groupbuildplc.com</a></p>
+                                    <p><a href="#" style="color:white;">info@groupbuildplc.com</a></p>
+                                    <p><a href="#" style="color:white;">www.groupbuildplc.com</a></p>
                                 </div>
                             </div>
                             <!-- End Single Address -->
@@ -288,8 +494,8 @@
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">(+251) 93 202 1111</a></p>
-                                    <p><a href="#">(+251) 93 205 1111</a></p>
+                                    <p><a href="#" style="color:white;">(+251) 93 202 1111</a></p>
+                                    <p><a href="#" style="color:white;">(+251) 93 205 1111</a></p>
                                 </div>
                             </div>
                             <!-- End Single Address -->
@@ -349,7 +555,7 @@
                                     <ul class="footer__instagram">
                                         <a
                                             href="https://www.facebook.com/profile.php?id=61556138165729&mibextid=ZbWKwL">
-                                            <div class="ico" style="padding-left: 15px;">
+                                            <div class="ico" style="padding-left: 15px; color:rgb(232, 232, 232);">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                     fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                                     <path
@@ -359,7 +565,7 @@
                                         </a>
 
                                         <a href="https://www.instagram.com/group_build_?igsh=YmtzcThlcjF0b2Rt">
-                                            <div class="ico" style="padding-left: 15px;">
+                                            <div class="ico" style="padding-left: 15px; color:rgb(232, 232, 232);">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                     fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                                                     <path
@@ -369,7 +575,7 @@
                                         </a>
                                         <a
                                             href="https://www.linkedin.com/in/group-build-4943a82b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                                            <div class="ico" style="padding-left: 15px;">
+                                            <div class="ico" style="padding-left: 15px; color:rgb(232, 232, 232);">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                     fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                                                     <path
@@ -378,7 +584,7 @@
                                             </div>
                                         </a>
                                         <a href="https://www.tiktok.com/@group_build?_t=8jgUHQmwKhR&_r=1">
-                                            <div class="ico" style="padding-left: 15px;">
+                                            <div class="ico" style="padding-left: 15px; color:rgb(232, 232, 232);">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                     fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
                                                     <path
@@ -387,7 +593,7 @@
                                             </div>
                                         </a>
                                         <a href="https://x.com/GroupBuild55178?t=ghWU5YvDiV2cR-Edpnrgzw&s=35">
-                                            <div class="ico" style="padding-left: 15px;">
+                                            <div class="ico" style="padding-left: 15px; color:rgb(232, 232, 232);">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                     fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                                                     <path
@@ -398,6 +604,8 @@
                                     </ul>
                                 </div>
                             </div>
+                            <!-- End Single Footer -->
+
                             <!-- End Single Footer -->
                         </div>
                     </div>
@@ -418,11 +626,13 @@
             </div>
         </footer>
         <!-- End Footer Area -->
+
     </div>
     <!-- Body main wrapper end -->
 
     <!-- Placed js at the end of the document so the pages load faster -->
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap framework js -->
@@ -431,221 +641,84 @@
     <script src="js/plugins.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-
-    <!-- Google Map js -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmGmeot5jcjdaJTvfCmQPfzeoG_pABeWo"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
+    <!-- Script JS -->
+    <script src="./js/testmony.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 12,
-
-                scrollwheel: false,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(23.7286, 90.3854), // New York
-
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                styles:
-                    [
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                                {
-                                    "saturation": 36
-                                },
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 40
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.text.stroke",
-                            "stylers": [
-                                {
-                                    "visibility": "on"
-                                },
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 16
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.icon",
-                            "stylers": [
-                                {
-                                    "visibility": "off"
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "administrative",
-                            "elementType": "geometry.fill",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 20
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "administrative",
-                            "elementType": "geometry.stroke",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 17
-                                },
-                                {
-                                    "weight": 1.2
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "landscape",
-                            "elementType": "geometry",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 20
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "poi",
-                            "elementType": "geometry",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 21
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "geometry.fill",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 17
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "geometry.stroke",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 29
-                                },
-                                {
-                                    "weight": 0.2
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "road.arterial",
-                            "elementType": "geometry",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 18
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "road.local",
-                            "elementType": "geometry",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 16
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "transit",
-                            "elementType": "geometry",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 19
-                                }
-                            ]
-                        },
-                        {
-                            "featureType": "water",
-                            "elementType": "geometry",
-                            "stylers": [
-                                {
-                                    "color": "#000000"
-                                },
-                                {
-                                    "lightness": 17
-                                }
-                            ]
-                        }
-                    ]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('googleMap');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(23.7286, 90.3854),
-                map: map,
-                title: 'Construction!',
-                icon: 'images/icons/map.png',
-                animation: google.maps.Animation.BOUNCE
-
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.swiperCarousel', {
+                slidesPerView: 1,  // Number of slides to show at once
+                spaceBetween: 10,  // Space between slides
+                loop: true,        // Enable infinite loop mode
+                autoplay: {
+                    delay: 3000,   // Delay between transitions (in ms)
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
             });
-        }
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        anime({
+            targets: "#contact-form",
+            opacity: [0, 1],
+            scale: [0.5, 1],
+            duration: 500,
+            easing: "easeInOut",
+            delay: 100,
+        });
+    </script>
+    ,
+    <script>
+        /*==================EMAIL JS=====================*/
+        const contactForm = document.getElementById("contact-form"),
+            contactMessage = document.getElementById("contact-message");
+
+        const sendEmail = (e) => {
+            e.preventDefault();
+
+            //serviceID - temeplet - #form - publickey
+
+            emailjs
+                .sendForm(
+                    "service_3kxyyah",
+                    "template_h5p9i7o",
+                    "#contact-form",
+                    "Z2KoAtq-DpX1mxxtM"
+                )
+                .then(
+                    () => {
+                        // Show sent message
+                        contactMessage.textContent = "Thank you for joining the Group Build community! One of our team members will be in touch with you shortly to discuss the next steps. ✅";
+
+                        // Remove message after five seconds
+                        setTimeout(() => {
+                            contactMessage.textContent = "";
+                        }, 5000);
+
+                        //Clear input Fields
+                        contactForm.reset();
+                    },
+                    () => {
+                        // Show error message
+                        contactMessage.textContent = "Message not sent (service error) ❌";
+                    }
+                );
+        };
+        contactForm.addEventListener("submit", sendEmail);
     </script>
 
-    <!-- Waypoints.min.js. -->
-    <script src="js/waypoints.min.js"></script>
-    <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
 
 </body>
 
