@@ -198,12 +198,12 @@ a {
 a:hover,
 a:focus,
 a:active {
-    color: #fc3636;
+    color: #ad1717;
 }
 p a:hover,
 p a:focus,
 p a:active {
-    color: #fc3636;
+    color: #ad1717;
 }
 h1 a,
 h2 a,
@@ -254,14 +254,14 @@ body {
   background: #fff;
 }
 .mark, mark {
-    background: #fc3636 none repeat scroll 0 0;
+    background: #ad1717 none repeat scroll 0 0;
     color: #ffffff;
 }
 /*-------------------------------
   06. Bg-Color
 -------------------------------------*/
 .bg__theme {
-    background: #fc3636;
+    background: #ad1717;
 }
 .bg__white {
   background: #fff;
@@ -331,10 +331,10 @@ body {
   09. Text Color
 --------------------------------*/
 .text--theme { 
-  color: #fc3636;
+  color: #ad1717;
  }
 .text--blue { 
-  color: #fc3636;
+  color: #ad1717;
  }
 .text--white { 
   color: #fff ;
@@ -525,7 +525,7 @@ body {
 [data--theme__overlay]:before {
     position: absolute;
     content: '';
-    background: #fc3636;
+    background: #ad1717;
     width: 100%;
     height: 100%;
     top: 0;
@@ -553,19 +553,19 @@ select {
 }
 input:focus {
     background: transparent;
-    border: 1px solid #fc3636;
+    border: 1px solid #ad1717;
 }
 textarea {
     resize: none;
-    background: #fc3636;
-    border: 1px solid #fc3636;
+    background: #ad1717;
+    border: 1px solid #ad1717;
     padding: 10px;
     width: 100%;
     font-size: 14px;
 }
 textarea:focus {
     background: transparent;
-    border: 1px solid #fc3636;
+    border: 1px solid #ad1717;
     outline: none;
 }
 /*----------------------------
@@ -765,17 +765,17 @@ p.error {
 ------------------------------------------*/
 
 *::-moz-selection {
-    background: #fc3636;
+    background: #ad1717;
     color: #fff;
     text-shadow: none;
 }
 ::-moz-selection {
-    background: #fc3636;
+    background: #ad1717;
     color: #fff;
     text-shadow: none;
 }
 ::selection {
-    background: #fc3636;
+    background: #ad1717;
     color: #fff;
     text-shadow: none;
 }

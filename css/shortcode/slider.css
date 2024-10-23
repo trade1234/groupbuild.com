@@ -73,7 +73,7 @@
   margin-top: 40px;
 }
 .htc__btn {
-  background: #fc3636 none repeat scroll 0 0;
+  background: #ad1717 none repeat scroll 0 0;
   color: #fff;
   display: inline-block;
   font-family: Raleway;
@@ -83,12 +83,12 @@
   line-height: 45px;
   padding: 0 25px;
   transition: 0.5s;
-  border: 1px solid #fc3636;
+  border: 1px solid #ad1717;
 }
 .htc__btn:hover {
-  border: 1px solid #fc3636;
+  border: 1px solid #ad1717;
   background: transparent;
-  color: #fc3636;
+  color: #ad1717;
 }
 
 .htc__slider__fornt__img {

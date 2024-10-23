@@ -16,66 +16,63 @@
 
 */
 
-
 /*----------------------------------
   Header Top Area
 -------------------------------------*/
 
 .heaher__top__left {
-    align-items: center;
-    display: flex;
-    height: 45px;
+  align-items: center;
+  display: flex;
+  height: 45px;
 }
 .header__top__right {
-    align-items: center;
-    display: flex;
-    height: 45px;
-    justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  height: 45px;
+  justify-content: flex-end;
 }
 .login-register {
-    display: flex;
-    margin-right: 47px;
+  display: flex;
+  margin-right: 47px;
 }
 .heaher__top__left li {
-    color: #fff;
-    font-size: 12px;
+  color: #fff;
+  font-size: 12px;
 }
 .heaher__top__left li + li {
-    margin-left: 47px;
+  margin-left: 47px;
 }
 .heaher__top__left li i {
-    padding-right: 12px;
+  padding-right: 12px;
 }
 .login-register li a {
-    font-size: 12px;
-    text-transform: uppercase;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 .login-register li.separator {
-    color: #fff;
-    padding: 0 10px;
+  color: #fff;
+  padding: 0 10px;
 }
 .heaher__top__btn a {
-    align-items: center;
-    background: #fc3636 none repeat scroll 0 0;
-    color: #fff;
-    display: flex;
-    font-weight: 700;
-    height: 45px;
-    padding: 0 30px;
-    text-transform: uppercase;
-    transition: all 0.4s ease 0s;
+  align-items: center;
+  background: #ad1717 none repeat scroll 0 0;
+  color: #fff;
+  display: flex;
+  font-weight: 700;
+  height: 45px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
 }
 .heaher__top__btn a:hover {
-    color: #060606;
+  color: #060606;
 }
-
 
 /*----------------------------------------
   Menu basic style
 ------------------------------------------*/
 
-
-.header{
+.header {
   z-index: 10;
   position: relative;
 }
@@ -99,26 +96,26 @@
 .main__menu li {
   position: relative;
 }
-.main__menu > li:hover > a{
-  color: #fc3636;
+.main__menu > li:hover > a {
+  color: #ad1717;
 }
-.logo a{
+.logo a {
   display: block;
 }
 
 .logo {
-    height: 130px;
-    line-height: 130px;
+  height: 130px;
+  line-height: 130px;
 }
 .main__menu li {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 .htc__header__search {
-    align-items: center;
-    display: flex;
-    height: 130px;
-    justify-content: flex-end;
-    position: relative;
+  align-items: center;
+  display: flex;
+  height: 130px;
+  justify-content: flex-end;
+  position: relative;
 }
 .htc__header__search input {
   -moz-border-bottom-colors: none;
@@ -138,23 +135,22 @@
   width: 100%;
 }
 .htc__header__search a i {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-53%);
-    transition: 0.4s;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-53%);
+  transition: 0.4s;
 }
-.htc__header__search a i:hover{
-    color: #fc3636;
+.htc__header__search a i:hover {
+  color: #ad1717;
 }
 .htc__header__search i {
-    color: #bfbfbf;
-    font-size: 12px;
+  color: #bfbfbf;
+  font-size: 12px;
 }
 .htc__header__search input::-moz-placeholder {
   color: #bfbfbf !important;
 }
-
 
 /*-----------------------------------------
   Sticky  For  Header
@@ -187,11 +183,6 @@
   height: 70px;
 }
 
-
-
-
-
-
 .fluid-container.mobile-menu-container {
   position: relative;
 }
@@ -212,8 +203,8 @@
 /*-----------------------------
   Dropdown Menu
 --------------------------------*/
-.main__menu li.drop{
-    position: relative;
+.main__menu li.drop {
+  position: relative;
 }
 
 .main__menu li.drop ul.dropdown {
@@ -232,40 +223,28 @@
 }
 
 .main__menu li.drop:hover ul.dropdown {
-    opacity: 1;
-    visibility: visible;
-    top: 100%;
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
 }
 .main__menu ul.dropdown li {
-    border-bottom: 1px solid #f4f4f4;
-    display: block;
-    padding: 0;
+  border-bottom: 1px solid #f4f4f4;
+  display: block;
+  padding: 0;
 }
 .main__menu ul.dropdown li a {
-    background: #ffffff none repeat scroll 0 0;
-    color: #1f2d30;
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 12px 15px;
-    text-align: left;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s ease 0s;
+  background: #ffffff none repeat scroll 0 0;
+  color: #1f2d30;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
 }
 .main__menu li.drop ul.dropdown li:hover > a {
-    background: #fafafa none repeat scroll 0 0;
-    color: #fc3636;
+  background: #fafafa none repeat scroll 0 0;
+  color: #ad1717;
 }
-
-
-
-
-
-
-
-
-
-
-
-
